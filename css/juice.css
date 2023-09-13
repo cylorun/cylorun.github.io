@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(206, 187, 224);
+}
+
+#header{
+    width: 30%;
+    font-size: 70%;
+    font-family:'Gill Sans MT';
+    float: left;
+    background-color: orange;
+    border-radius:15px;
+}
+#hanbani_img{
+    float:right;
+}
+#juice-pbs{
+    float: left;
+}

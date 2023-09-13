@@ -2,14 +2,14 @@ kind, 8:38
 misfit, 10:49
 deuce, 10:45
 darvy 11:11
-cylo, 50:52
+cylo, 10:52
 region, 12:39
-maya
-paperpal
+maya, 14:20
+paperpal, 11:15
 antoo, 11:05
 corotto, 12:49
-crossroads, 10:24 bt ar
-dejung
+crossroads, 10:24 (BT AR)
+dejung, 10:49
 greeting, 10:08
 mado, 10:04
 hawkeyespy, 10:47
@@ -19,16 +19,13 @@ drip, 9:55
 blindtravel, 11:07
 90tom, 9:05
 trashresolution, 10:05
-chezburger
+chezburger, 15:30
 retropog, 9:52
-blifnorf
 cosyplane, 18:59
 centurie, 10:56
-eggy,
 saturn, 10:44
 isaac, 11:17
-nxjang
-oceanico
-rainv
+nxjang, 11:27
+oceanico, 11:30
 booster, 11:56
-projlej
+
