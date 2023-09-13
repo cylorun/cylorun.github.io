@@ -11,15 +11,12 @@
                 .then(data => {
                     const timestampList = document.getElementById('juice-pbs');
                     const timestamps = data.trim().split('\n');
-
                     const sortedTimestamps = timestamps.sort((a, b) => {
                         const aTime = a.match(/(\d+):(\d+)/);
                         const bTime = b.match(/(\d+):(\d+)/);
-
                         if (aTime && bTime) {
                             const [aMinutes, aSeconds] = aTime.slice(1).map(Number);
                             const [bMinutes, bSeconds] = bTime.slice(1).map(Number);
-
                             if (aMinutes === bMinutes) {
                                 return aSeconds - bSeconds;
                             } else {
@@ -41,15 +38,18 @@
         window.addEventListener('load', displayTimestamps);
     </script>
 </head>
-<link rel="stylesheet" href="./css/juice.css">
+    <link rel="stylesheet" href="./css/juice.css">
 <body>
     <div id="header">
         <h1>Juice Leaderboard </h1>
         <p>09.2023</p>  
     </div>  
-    <img src="./images/hanbani.png" alt="hanbani" id="hanbani_img">
-    <ol id="juice-pbs">
-    </ol>
+        <a href="index.html">
+            <img src="./images/hanbani.png" alt="hanbani" id="hanbani_img">
+        </a>
+
+    <ol id="juice-pbs"></ol>
+    
 </body>
 </html>
     

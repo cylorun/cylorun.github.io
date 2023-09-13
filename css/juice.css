@@ -1,18 +1,19 @@
 body{
-    background-color: rgb(206, 187, 224);
+    background-color: rgb(68, 41, 94);
 }
-
+a{
+    float: right;
+}
 #header{
     width: 30%;
     font-size: 70%;
-    font-family:'Gill Sans MT';
+    font-family: "Comic Sans MS";
     float: left;
-    background-color: orange;
+    background-color: rgb(192, 136, 34);
     border-radius:15px;
-}
-#hanbani_img{
-    float:right;
 }
 #juice-pbs{
     float: left;
+    color: rgb(198, 27, 178);
+    font-family: "Comic Sans MS";
 }
