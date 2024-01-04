@@ -1,5 +1,5 @@
 kind, 8:38
-misfit, 10:49
+misfit, 9:56
 deuce, 10:45
 darvy 11:11
 cylo, 10:52
@@ -10,13 +10,13 @@ antoo, 11:05
 corotto, 12:49
 crossroads, 10:24 (BT AR)
 dejung, 10:49
-greeting, 10:08
+greeting, 8:52
 mado, 10:04
 hawkeyespy, 10:47
 maraico, 11:25
 skylewl, 9:48
-drip, 9:55
-blindtravel, 11:07
+drip, 7:01
+blindtravel, 10:00
 90tom, 9:05
 trashresolution, 10:05
 chezburger, 15:58
