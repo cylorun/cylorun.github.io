@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L9</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #output {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #bb86fc;
+            text-align: center;
+            word-wrap: break-word;
+            max-width: 80%;
+        }
+
+        button {
+            background-color: #1f1f1f;
+            color: #fff;
+            border: 2px solid #bb86fc;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #bb86fc;
+            color: #121212;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="output">Click "generte" to get a name</p>
+    <button onclick="generateName()">Generate</button>
+
+    <script>
+        const splashes = ["Asking ChatGPT", "Asking for approval"]
+        const splashCountToShow = 2;
+        
+        const words = [
+            "furry", "sex", "gooner", "lover", "catboy", "femboy", "girl", "boy",
+            "cat", "kisser", "feinberg", "couri", "meow", "bark",
+            "kitten", "puppy", "snuggly", "uwu", "nya", "howler", "tail",
+            "ears", "wolfy", "paws", "sniffer", "licker", "howl", "bunny",
+            "fox", "snout", "growl", "softie", "snuggle", "tiny", "cute",
+            "blushy", "owo", "rawr", "beast", "fluff", "sniffer", "meower",
+            "bridge","treasure", "wifey", "housing"
+        ];
+
+        async function generateName() {
+            const splashes = ["Asking ChatGPT", "Applying to mcdonalds", "Applying mcdonalds coupon", "Downloading files"];
+            const splashCountToShow = 2;
+            const OUT_P = document.getElementById("output");
+
+            for (let i = 0; i < splashCountToShow; i++) {
+                let rand = splashes[Math.floor(Math.random() * splashes.length)];
+                OUT_P.textContent = rand;
+
+                for (let j = 1; j <= 3; j++) {
+                    await new Promise(resolve => setTimeout(resolve, 300));
+                    OUT_P.textContent = rand + ".".repeat(j);
+                }
+
+                await new Promise(resolve => setTimeout(resolve, 500));
+            }
+
+            let w = [];
+            for (let i = 0; i < 3; i++) {
+                let rand = words[Math.floor(Math.random() * words.length)];
+                w.push(rand);
+            }
+            let number = Math.floor(10 + Math.random() * 90);
+
+            OUT_P.textContent = `L9_${w.join("")}${number}`;
+        }
+
+    </script>
+</body>
+
+</html>
