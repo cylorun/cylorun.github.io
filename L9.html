@@ -18,7 +18,7 @@
             margin: 0;
         }
 
-        #output {
+        p, h1, h2{
             font-size: 1.5rem;
             margin-bottom: 20px;
             color: #bb86fc;
@@ -42,52 +42,109 @@
             background-color: #bb86fc;
             color: #121212;
         }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: space-between;
+        }
+
+        main div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+            padding-bottom: 20px;
+            align-items: center;
+            width: 100vw;
+        }
+        
+        #img-cont {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 20px
+        }
+
+        img {
+            padding-top: 18px;
+            max-width: 200px;
+        }
     </style>
 </head>
 
 <body>
-    <p id="output">Click "generte" to get a name</p>
-    <button onclick="generateName()">Generate</button>
+    <main>
+        <div id="img-cont">
+            <img src="/images/theydontknow.jpg" alt="">
+            <img src="/images/fein.png" alt="">
+            
+            <div>
+                <img src="/images/potato.png" alt="potato" width="200">
+                <h1>Do u pick up?</h1>
+            </div>
+            <img src="/images/ffff.png" alt="">
+        </div>
+        <div>
+            <p id="output">Click "generate" to get a name</p>
+            <button onclick="generateName()">Generate</button>
+        </div>
 
-    <script>
-        const splashes = ["Asking ChatGPT", "Asking for approval"]
-        const splashCountToShow = 2;
-        
+        <footer>
+            <p> made by <a href="https://github.com/cylorun">sillyrubs</a></p>
+            <a href="https://www.twitch.tv/eliteo_0">elite</a>
+            <a href="https://www.twitch.tv/feinberg">feinbuh</a>
+            <a href="https://mcsrranked.com">MCSR RANKED!</a>
+            
+
+        </footer>
+    </main>
+    <script>        
         const words = [
-            "furry", "sex", "gooner", "lover", "catboy", "femboy", "girl", "boy",
+            "furry", "gooner", "lover", "catboy", "femboy", "girl", "boy",
             "cat", "kisser", "feinberg", "couri", "meow", "bark",
             "kitten", "puppy", "snuggly", "uwu", "nya", "howler", "tail",
             "ears", "wolfy", "paws", "sniffer", "licker", "howl", "bunny",
             "fox", "snout", "growl", "softie", "snuggle", "tiny", "cute",
             "blushy", "owo", "rawr", "beast", "fluff", "sniffer", "meower",
-            "bridge","treasure", "wifey", "housing"
+            "bridge","treasure", "wifey", "housing",
+            "online", "paw", "job"
         ];
+
+        const MAX_WORD_LEN = 14;
 
         async function generateName() {
             const splashes = ["Asking ChatGPT", "Applying to mcdonalds", "Applying mcdonalds coupon", "Downloading files"];
             const splashCountToShow = 2;
             const OUT_P = document.getElementById("output");
 
-            for (let i = 0; i < splashCountToShow; i++) {
-                let rand = splashes[Math.floor(Math.random() * splashes.length)];
-                OUT_P.textContent = rand;
+            let randspl = splashes[Math.floor(Math.random() * splashes.length)];
+            OUT_P.textContent = randspl;
 
-                for (let j = 1; j <= 3; j++) {
-                    await new Promise(resolve => setTimeout(resolve, 300));
-                    OUT_P.textContent = rand + ".".repeat(j);
-                }
-
-                await new Promise(resolve => setTimeout(resolve, 500));
+            for (let j = 1; j <= 3; j++) {
+                await new Promise(resolve => setTimeout(resolve, 200));
+                OUT_P.textContent = randspl + ".".repeat(j);
             }
+        
 
-            let w = [];
-            for (let i = 0; i < 3; i++) {
+            let n = ""
+            while (true) {
                 let rand = words[Math.floor(Math.random() * words.length)];
-                w.push(rand.toUpperCase());
+                if (n.length + rand.length >= MAX_WORD_LEN) break;
+                n += rand.toUpperCase()
             }
+                
             let number = Math.floor(10 + Math.random() * 90);
 
-            OUT_P.textContent = `L9_${w.join("")}${number}`;
+            const w = `L9_${n}${n.length <= 11 ? number : ''}`
+            OUT_P.textContent = w;
         }
 
     </script>
